@@ -1,3 +1,6 @@
+/*
+Автор кодера - Курашин Максим
+*/
 #include <iostream>
 #include <fstream>
 
