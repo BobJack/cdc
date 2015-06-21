@@ -1,3 +1,6 @@
+/*
+Автор декодера - Сысоев Сергей
+*/
 #include <fstream> 
 #include <iostream> 
 #include <math.h>
