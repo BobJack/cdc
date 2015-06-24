@@ -2,6 +2,7 @@
 Автор декодера - Сысоев Сергей
 test
 test1
+test2
 */
 #include <fstream> 
 #include <iostream> 
