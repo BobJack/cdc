@@ -3,7 +3,7 @@
 #include "globalsettings.h"
 
 void showHelp() {
-    string helpMessage = "\nSyntax: cdc flag path_to_file\n\n\
+    string helpMessage = "\nSyntax: ./cdc flag path_to_file\n\n\
 Flags: --help (-h)    Prints help\n\
        --code (-c)    Code message\n\
        --decode (-d)  Decode message\n\r";
