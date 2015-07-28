@@ -12,22 +12,16 @@ void mirror(int *s, int n){ //change the position of letters arranged symmetrica
 
 int code(char const *pathToFile) {
     fstream fileToCode;
-    const int maxMessageLength = 128;
     if (pathToFile) {
         fileToCode.open(pathToFile, ios::in | ios::out);
         char *c = new char;
         string message;
-        cout<<"Enter message (max "<<maxMessageLength<<") symbols"<<endl;
         getline(cin, message);
         int messageLength = message.length();
-        if (messageLength > maxMessageLength){
-            cerr<<"Your password is too long!"<<endl;
-            return -1;
-        }
         int binary[8];
         char temp;
         fileToCode.seekg(0, ios::beg);
-        for (int i = 0; i<passlen; i++){
+        for (int i = 0; i<messageLength; i++){
             temp = message[i];
             for (int j = 0; j < 8; j++){
                 *(binary+j) = temp%2;
