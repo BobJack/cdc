@@ -16,6 +16,7 @@ int code(char const *pathToFile) {
         fileToCode.open(pathToFile, ios::in | ios::out);
         char *c = new char;
         string message;
+        cout<<"Enter message:"<<endl;
         getline(cin, message);
         int messageLength = message.length();
         int binary[8];
