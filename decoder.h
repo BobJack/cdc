@@ -7,7 +7,7 @@
 #include <iostream>
 #include <math.h>
 
-#define getbit(x,pos) ( ((x) & ( 0x1 << (pos) )) !=0 )
+#define getbit(x,pos) ( ((x) & ( 0x1 << (pos) )) !=0 ) // get bit per position
 
 using namespace std;
 
