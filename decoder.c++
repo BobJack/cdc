@@ -15,7 +15,7 @@ int decode(char const *pathToFile) {
     int n = 0, i;
     if (pathToFile) {
         ifstream fin(pathToFile, ios::in);
-        cout<<"Количество символов:"<<endl;
+        cout<<"Amount of symbols:"<<endl;
         cin>>n;
 
         int *bits = new int[n*8];
