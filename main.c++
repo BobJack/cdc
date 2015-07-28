@@ -1,5 +1,4 @@
 #include <QCoreApplication>
-#include <QCryptographicHash>
 #include "globalsettings.h"
 
 
