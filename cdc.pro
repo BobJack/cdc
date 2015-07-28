@@ -16,7 +16,11 @@ TEMPLATE = app
 
 
 SOURCES += main.c++ \
-    decoder.c++
+    decoder.c++ \
+    coder.c++ \
+    globalfunctions.c++
 
 HEADERS += \
-    decoder.h
+    decoder.h \
+    coder.h \
+    globalsettings.h

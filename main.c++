@@ -1,10 +1,14 @@
 #include <QCoreApplication>
-#include "decoder.h"
+#include "globalsettings.h"
 
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    decode(argv);
-    return a.exec();
+    if (argc < 2) {
+        showHelp();
+    } else {
+        chooseAction(argv);
+    }
+    a.exit();
 }

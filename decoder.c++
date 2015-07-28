@@ -1,4 +1,5 @@
 #include "decoder.h"
+#include "globalsettings.h"
 
 char todec(const int n, const int *arr) { // bin to dec (array of 1,0)
     int dec = 0, j = 0, p = 0;
@@ -10,9 +11,8 @@ char todec(const int n, const int *arr) { // bin to dec (array of 1,0)
     return dec;
 }
 
-int decode(char *argv[]) {
+int decode(char const *pathToFile) {
     int n = 0, i;
-    char const *pathToFile = argv[1];
     if (pathToFile) {
         ifstream fin(pathToFile, ios::in);
         cout<<"Количество символов:"<<endl;
