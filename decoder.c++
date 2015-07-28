@@ -18,7 +18,7 @@ int decode(char const *pathToFile) {
         cout<<"Amount of symbols:"<<endl;
         cin>>amountOfSymbols;
 
-        int *bits = new int[n*8];
+        int *bits = new int[amountOfSymbols*8];
         fileToDecode.seekg(0,ios::beg);
 
         for (i = 0; i < (amountOfSymbols*8); i++) {
