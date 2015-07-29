@@ -1,4 +1,4 @@
-#include "coder.h"
+#include "encoder.h"
 #include "globalsettings.h"
 
 void mirror(int *s, int n){ //change the position of letters arranged symmetrically relative to the central letter
@@ -10,10 +10,10 @@ void mirror(int *s, int n){ //change the position of letters arranged symmetrica
     }
 }
 
-int code(char const *pathToFile) {
-    fstream fileToCode;
+int encode(char const *pathToFile) {
+    fstream fileToEncode;
     if (pathToFile) {
-        fileToCode.open(pathToFile, ios::in | ios::out);
+        fileToEncode.open(pathToFile, ios::in | ios::out);
         char *c = new char;
         string message;
         cout<<"Enter message:"<<endl;
@@ -21,7 +21,7 @@ int code(char const *pathToFile) {
         int messageLength = message.length();
         int binary[8];
         char temp;
-        fileToCode.seekg(0, ios::beg);
+        fileToEncode.seekg(0, ios::beg);
         for (int i = 0; i<messageLength; i++){
             temp = message[i];
             for (int j = 0; j < 8; j++){
@@ -30,17 +30,17 @@ int code(char const *pathToFile) {
             }
             mirror(binary, 8);
             for (int j = 0; j < 8; j++){
-                fileToCode.read(c, 1);
-                fileToCode.seekg(i*8+j, ios::beg);
+                fileToEncode.read(c, 1);
+                fileToEncode.seekg(i*8+j, ios::beg);
                 if (*(binary+j))
                     *c = *c | binary[j];
                 else
                     *c = *c & 254;
-                fileToCode.write(c,1);
+                fileToEncode.write(c,1);
             }
         }
         delete(c);
-        fileToCode.close();
+        fileToEncode.close();
         cout<<"Lenght of message:"<<messageLength<<endl;
         return 0;
     } else {
@@ -48,3 +48,4 @@ int code(char const *pathToFile) {
         return -1;
     }
 }
+
